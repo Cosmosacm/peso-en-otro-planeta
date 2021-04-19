@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tu peso en un planeta diferente</title>
+        <title>Tú masa en otros planetas</title>
     </head>
     <body>
-        <h1>Tu Peso en Otro Planeta</h1>
-        <p>En cada planeta tu peso es distinto al de la tierra</p>
+        <h1>Calcula t&uacute; Masa en otros Planetas</h1>
+        <p>La Masa nunca cambia, pero en cada planeta el Peso es distinto al de la tierra por que var&iacute;a la gravedad
+        del planeta</p>
+        <p><strong>Peso (N) = masa (Kg) * gravedad (m/s^2)</strong></p>
+        <p>Cu&aacute;l es t&uacute; masa en un planeta diferente si pesaras lo mismo que en la tierra</p>
         <script type="text/javascript">
             var g_tierra = 9.8;
             var g_marte = 3.7;
             var g_jupiter = 24.8;
-            var peso;
-            var usuario;
-            var peso_final;
+            var masa_tierra;
+            var masa_final;
             var planeta;
-            usuario = prompt("¿Cual es tu peso en kilogramos en la tierra?");    
-            peso = parseInt(usuario);
-            planeta = prompt("Elige el número del planeta donde deseas saber tu nuevo peso:\n 1. Marte\n 2. Jupiter");
+            masa_tierra = prompt("¿Cual es tú masa en kilogramos en la tierra?");    
+            masa_tierra = parseInt(masa_tierra);
+            planeta = prompt("Elige el número del planeta donde deseas saber cuál sería tú masa:\n 1. Marte\n 2. Jupiter");
             planeta = parseInt(planeta);
+            document.write("Si t&uacute; masa en la tierra es de: <strong>" + masa_tierra + " Kilos</strong></br>");
             if (planeta == 1)
             {
-                peso_final = peso * g_marte / g_tierra;
+                masa_final = masa_tierra * g_tierra / g_marte;
                 planeta = "en marte";
             }
             else if (planeta == 2)
             {
-                peso_final = peso * g_jupiter / g_tierra;
+                masa_final = masa_tierra * g_tierra / g_jupiter;
                 planeta = "en jupiter";
             }
             else
             {
-                peso_final = peso * 1000000;
+                masa_final = masa_tierra * 1000000;
                 planeta = "por no elegir un planeta de la lista asumimos que eres de Kripton y";
             }
-            peso_final = parseInt(peso_final);
-            document.write("Tu peso " + planeta + " es: <strong>" + peso_final + " Kilos</strong>");
+            masa_final = parseInt(masa_final);
+            document.write("T&uacute; masa " + planeta + " es: <strong>" + masa_final + " Kilos</strong>");
         </script>
     </body>
 </html>
